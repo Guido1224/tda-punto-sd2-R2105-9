@@ -125,6 +125,38 @@ System.out.println(otroPunto.toString());
     @Override
     public Punto damePuntoMedioEntreOtroPunto(Punto OtroPunto) {
 
-        return null;
+        double xmedio=0;
+        double ymedio=0;
+        double zmedio=0;
+        double zmedia=0;
+
+        double puntox1=this.x;
+        double puntoy1=this.y;
+        double puntox2=OtroPunto.getX();
+        double puntoy2=OtroPunto.getY();
+        double puntoz1=this.z;
+        double puntoz2=OtroPunto.getZ();
+
+        System.out.println(this.toString());
+        System.out.println(OtroPunto.toString());
+      
+        if(this.sistema == Sistema.PLANO && OtroPunto.getSistema()== Sistema.PLANO){
+            xmedio = (puntox1 + puntox2)/2;
+            ymedio = (puntoy1 + puntoy2)/2;
+            return new Punto(Sistema.PLANO,xmedio,ymedio);
+        
+        }else if (this.sistema== Sistema.ESPACIO && otroPunto.getSistema()== Sistema.ESPACIO){
+
+          xmedio = (puntox1 + puntox2)/2;
+          ymedio = (puntoy1 + puntoy2)/2;
+          zmedio = (puntoz1 + puntoz2)/2;
+          return new Punto(Sistema.ESPACIO,xmedio,ymedio,zmedio);
+
+
+        }else {
+            System.out.println("Debe proporcionar un sistema compatible para calcular el punto medio");
+            
+      return null;
     }
+}
 }
