@@ -145,7 +145,7 @@ System.out.println(otroPunto.toString());
             ymedio = (puntoy1 + puntoy2)/2;
             return new Punto(Sistema.PLANO,xmedio,ymedio);
         
-        }else if (this.sistema== Sistema.ESPACIO && otroPunto.getSistema()== Sistema.ESPACIO){
+        }else if (this.sistema== Sistema.ESPACIO && OtroPunto.getSistema()== Sistema.ESPACIO){
 
           xmedio = (puntox1 + puntox2)/2;
           ymedio = (puntoy1 + puntoy2)/2;
